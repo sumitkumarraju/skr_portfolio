@@ -29,10 +29,10 @@ export default function Home() {
                 style={{ transitionDuration: "800ms" }}
             >
                 <div className="text-center animate-fade-in-up">
-                    <h1 className="text-white text-6xl md:text-8xl font-black tracking-tighter mb-2 font-lilex">
+                    <h1 className="text-white text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter mb-2 font-lilex">
                         SKR
                     </h1>
-                    <p className="text-white/90 text-sm md:text-lg font-medium tracking-[0.2em] uppercase">
+                    <p className="text-white/90 text-xs sm:text-sm md:text-lg font-medium tracking-[0.2em] uppercase">
                         Digital Design Studio
                     </p>
                 </div>
@@ -40,29 +40,32 @@ export default function Home() {
 
             <main
                 className={cn(
-                    "min-h-screen p-4 md:p-8 font-sans selection:bg-brandRed selection:text-white transition-opacity duration-1000 delay-500",
+                    "min-h-screen p-3 sm:p-4 md:p-8 font-sans selection:bg-brandRed selection:text-white transition-opacity duration-1000 delay-500",
                     loading ? "opacity-0" : "opacity-100"
                 )}
             >
-                <div className="max-w-6xl mx-auto space-y-4">
+                <div className="max-w-6xl mx-auto space-y-3 sm:space-y-4">
                     {/* Row 1 */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
                         <ProfileCard />
                         <FreelanceCard />
                     </div>
 
                     {/* Row 2 */}
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-3 sm:gap-4">
                         <TechStackCard />
                         <ProjectVideoCard
                             title="ZORO"
                             videoSrc="/zoro-demo.mp4"
                             projectUrl="https://zoro.skrdev.me"
+                            category="DESIGN"
                         />
                         <ProjectVideoCard
                             title="STICKER VERSE"
                             videoSrc="/Video Project 7.mp4"
                             projectUrl="https://sticker-verse.skrdev.me/"
+                            category="DESIGN"
+                            githubUrl="https://github.com/sumitkumarraju/Sticker-Verse"
                         />
                     </div>
 

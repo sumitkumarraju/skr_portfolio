@@ -11,6 +11,7 @@ const config: Config = {
             fontFamily: {
                 sans: ["var(--font-inter)"],
                 lilex: ["Lilex", "sans-serif"],
+                bangers: ["Bangers", "cursive"],
             },
             colors: {
                 brandRed: "#F9452D",
