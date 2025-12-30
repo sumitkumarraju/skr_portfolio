@@ -507,8 +507,8 @@ video {
 .hidden{
   display: none;
 }
-.h-12{
-  height: 3rem;
+.h-16{
+  height: 4rem;
 }
 .h-2{
   height: 0.5rem;
@@ -522,14 +522,11 @@ video {
 .h-auto{
   height: auto;
 }
-.h-16{
-  height: 4rem;
-}
 .min-h-screen{
   min-height: 100vh;
 }
-.w-12{
-  width: 3rem;
+.w-16{
+  width: 4rem;
 }
 .w-2{
   width: 0.5rem;
@@ -546,12 +543,6 @@ video {
 }
 .w-full{
   width: 100%;
-}
-.w-16{
-  width: 4rem;
-}
-.min-w-0{
-  min-width: 0px;
 }
 .max-w-6xl{
   max-width: 72rem;
@@ -779,18 +770,18 @@ video {
 .text-center{
   text-align: center;
 }
+.font-bangers{
+  font-family: Bangers, cursive;
+}
 .font-lilex{
   font-family: Lilex, sans-serif;
 }
 .font-sans{
   font-family: var(--font-inter);
 }
-.font-bangers{
-  font-family: Bangers, cursive;
-}
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 .text-5xl{
   font-size: 3rem;
@@ -814,10 +805,6 @@ video {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 .font-black{
   font-weight: 900;
@@ -846,14 +833,14 @@ video {
 .tracking-tighter{
   letter-spacing: -0.05em;
 }
+.tracking-wide{
+  letter-spacing: 0.025em;
+}
 .tracking-wider{
   letter-spacing: 0.05em;
 }
 .tracking-widest{
   letter-spacing: 0.1em;
-}
-.tracking-wide{
-  letter-spacing: 0.025em;
 }
 .text-black{
   --tw-text-opacity: 1;
@@ -1149,9 +1136,9 @@ body {
     font-size: 1.5rem;
     line-height: 2rem;
   }
-  .sm\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+  .sm\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
   }
   .sm\:text-6xl{
     font-size: 3.75rem;
@@ -1168,10 +1155,6 @@ body {
   .sm\:text-xs{
     font-size: 0.75rem;
     line-height: 1rem;
-  }
-  .sm\:text-5xl{
-    font-size: 3rem;
-    line-height: 1;
   }
 }
 
@@ -1205,8 +1188,8 @@ body {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
-  .md\:text-6xl{
-    font-size: 3.75rem;
+  .md\:text-7xl{
+    font-size: 4.5rem;
     line-height: 1;
   }
   .md\:text-8xl{
@@ -1224,10 +1207,6 @@ body {
   .md\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-  .md\:text-7xl{
-    font-size: 4.5rem;
-    line-height: 1;
   }
 }
 
