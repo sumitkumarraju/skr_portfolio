@@ -55,12 +55,12 @@ export default function Home() {
                 {/* Left Panel */}
                 <div
                     className={cn(
-                        "fixed top-0 left-0 w-1/2 h-full bg-black flex items-center justify-end pr-8 transition-transform duration-1000 ease-in-out",
+                        "fixed top-0 left-0 w-1/2 h-full bg-black flex items-center justify-end pr-3 sm:pr-6 md:pr-8 transition-transform duration-1000 ease-in-out",
                         !loading && "-translate-x-full"
                     )}
                 >
                     <div className="text-right">
-                        <h1 className="text-white text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter font-lilex">
+                        <h1 className="text-white text-5xl sm:text-6xl md:text-7xl font-black tracking-tighter font-lilex">
                             SKR
                         </h1>
                     </div>
@@ -69,12 +69,12 @@ export default function Home() {
                 {/* Right Panel */}
                 <div
                     className={cn(
-                        "fixed top-0 right-0 w-1/2 h-full bg-black flex items-center justify-start pl-8 transition-transform duration-1000 ease-in-out",
+                        "fixed top-0 right-0 w-1/2 h-full bg-black flex items-center justify-start pl-3 sm:pl-6 md:pl-8 transition-transform duration-1000 ease-in-out",
                         !loading && "translate-x-full"
                     )}
                 >
                     <div className="text-left">
-                        <p className="text-white/90 text-xs sm:text-sm md:text-lg font-medium tracking-[0.2em] uppercase">
+                        <p className="text-white/90 text-sm sm:text-base md:text-lg font-medium tracking-[0.15em] sm:tracking-[0.2em] uppercase">
                             Digital Design Studio
                         </p>
                     </div>

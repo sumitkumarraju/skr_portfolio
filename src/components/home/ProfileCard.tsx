@@ -36,14 +36,14 @@ export const ProfileCard = () => {
                 <span className="text-brandRed">AI</span>. Turning complex problems
                 into elegant code.
             </p>
-            <div className="flex flex-wrap gap-2 sm:gap-4 pt-2">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2 md:gap-4 pt-2">
                 <a
                     href="https://github.com/sumitkumarraju"
                     target="_blank"
                     className="p-2 bg-zinc-800 rounded-full hover:bg-white hover:text-black transition-colors"
                     rel="noopener noreferrer"
                 >
-                    <Github size={20} className="sm:hidden" />
+                    <Github size={18} className="sm:hidden" />
                     <Github size={24} className="hidden sm:block" />
                 </a>
                 <a
@@ -52,7 +52,7 @@ export const ProfileCard = () => {
                     className="p-2 bg-zinc-800 rounded-full hover:bg-[#0077b5] hover:text-white transition-colors"
                     rel="noopener noreferrer"
                 >
-                    <Linkedin size={20} className="sm:hidden" />
+                    <Linkedin size={18} className="sm:hidden" />
                     <Linkedin size={24} className="hidden sm:block" />
                 </a>
                 <a
@@ -61,7 +61,7 @@ export const ProfileCard = () => {
                     className="p-2 bg-zinc-800 rounded-full hover:bg-[#E1306C] hover:text-white transition-colors"
                     rel="noopener noreferrer"
                 >
-                    <Instagram size={20} className="sm:hidden" />
+                    <Instagram size={18} className="sm:hidden" />
                     <Instagram size={24} className="hidden sm:block" />
                 </a>
                 <a
@@ -70,12 +70,12 @@ export const ProfileCard = () => {
                     className="p-2 bg-zinc-800 rounded-full hover:bg-black hover:text-white transition-colors"
                     rel="noopener noreferrer"
                 >
-                    <Twitter size={20} className="sm:hidden" />
+                    <Twitter size={18} className="sm:hidden" />
                     <Twitter size={24} className="hidden sm:block" />
                 </a>
                 <a
                     href="mailto:SUMITTS317@gmail.com"
-                    className="px-3 sm:px-4 py-2 bg-zinc-800 rounded-full text-xs sm:text-sm font-medium hover:bg-zinc-700 transition-colors flex items-center gap-2"
+                    className="px-2.5 sm:px-3 md:px-4 py-2 bg-zinc-800 rounded-full text-[10px] sm:text-xs md:text-sm font-medium hover:bg-zinc-700 transition-colors flex items-center gap-1.5"
                 >
                     <Mail size={14} className="sm:hidden" />
                     <Mail size={16} className="hidden sm:block" />
@@ -84,7 +84,7 @@ export const ProfileCard = () => {
                 <a
                     href="/RESUME_SUMIT KUMAR RAJU.pdf"
                     target="_blank"
-                    className="px-3 sm:px-4 py-2 bg-zinc-800 rounded-full text-xs sm:text-sm font-medium hover:bg-zinc-700 transition-colors flex items-center gap-2"
+                    className="px-2.5 sm:px-3 md:px-4 py-2 bg-zinc-800 rounded-full text-[10px] sm:text-xs md:text-sm font-medium hover:bg-zinc-700 transition-colors flex items-center gap-1.5"
                     rel="noopener noreferrer"
                 >
                     <FileText size={14} className="sm:hidden" />
