@@ -12,29 +12,72 @@ export default function Home() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Mimic the window.onload + timeout behavior
+        // Split Shutter Animation
         const timer = setTimeout(() => {
             setLoading(false);
         }, 2000);
+
         return () => clearTimeout(timer);
     }, []);
 
+    useEffect(() => {
+        // Spotlight Effect Script
+        const cards = document.querySelectorAll('.bento-card');
+
+        const handleMouseMove = (e: MouseEvent, card: Element) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            (card as HTMLElement).style.setProperty('--mouse-x', `${x}px`);
+            (card as HTMLElement).style.setProperty('--mouse-y', `${y}px`);
+        };
+
+        cards.forEach(card => {
+            const listener = (e: Event) => handleMouseMove(e as MouseEvent, card);
+            card.addEventListener('mousemove', listener);
+        });
+
+        return () => {
+            cards.forEach(card => {
+                card.removeEventListener('mousemove', () => { });
+            });
+        };
+    }, [loading]);
+
     return (
         <>
-            <div
-                className={cn(
-                    "fixed inset-0 z-50 bg-brandRed flex flex-col items-center justify-center transition-transform duration-800 cubic-bezier(0.76, 0, 0.24, 1) ease-in-out",
-                    !loading && "-translate-y-full"
-                )}
-                style={{ transitionDuration: "800ms" }}
-            >
-                <div className="text-center animate-fade-in-up">
-                    <h1 className="text-white text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter mb-2 font-lilex">
-                        SKR
-                    </h1>
-                    <p className="text-white/90 text-xs sm:text-sm md:text-lg font-medium tracking-[0.2em] uppercase">
-                        Digital Design Studio
-                    </p>
+            {/* Split Shutter Preloader */}
+            <div className={cn(
+                "fixed inset-0 z-50 pointer-events-none",
+                loading && "pointer-events-auto"
+            )}>
+                {/* Left Panel */}
+                <div
+                    className={cn(
+                        "fixed top-0 left-0 w-1/2 h-full bg-black flex items-center justify-end pr-8 transition-transform duration-1000 ease-in-out",
+                        !loading && "-translate-x-full"
+                    )}
+                >
+                    <div className="text-right">
+                        <h1 className="text-white text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter font-lilex">
+                            SKR
+                        </h1>
+                    </div>
+                </div>
+
+                {/* Right Panel */}
+                <div
+                    className={cn(
+                        "fixed top-0 right-0 w-1/2 h-full bg-black flex items-center justify-start pl-8 transition-transform duration-1000 ease-in-out",
+                        !loading && "translate-x-full"
+                    )}
+                >
+                    <div className="text-left">
+                        <p className="text-white/90 text-xs sm:text-sm md:text-lg font-medium tracking-[0.2em] uppercase">
+                            Digital Design Studio
+                        </p>
+                    </div>
                 </div>
             </div>
 

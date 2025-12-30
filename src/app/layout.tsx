@@ -16,7 +16,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.variable} font-sans`}>{children}</body>
+            <body className={`${inter.variable} font-sans`}>
+                <div className="noise-overlay"></div>
+                {children}
+            </body>
         </html>
     );
 }
